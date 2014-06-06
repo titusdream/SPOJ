@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# PRIME1
+# PRIME1 | Sieve of Eratosthenes
 
 # Peter wants to generate some prime numbers for his cryptosystem. Help him! 
 # Your task is to generate all prime numbers between two given numbers!
