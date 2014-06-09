@@ -1,28 +1,31 @@
 #!/usr/bin/env python
 
-# TEST
+'''
+TEST
 
-# Your program is to use the brute-force approach in order to find 
-# the Answer to Life, the Universe, and Everything. More precisely... 
-# rewrite small numbers from input to output. Stop processing input after 
-# reading in the number 42. 
-# All numbers at input are integers of one or two digits.
+Your program is to use the brute-force approach in order to find 
+the Answer to Life, the Universe, and Everything. More precisely... 
+rewrite small numbers from input to output. Stop processing input after 
+reading in the number 42. 
+All numbers at input are integers of one or two digits.
 
-# Example
+Example
 
-# Input:
-# 1
-# 2
-# 88
-# 42
-# 99
+Input:
+1
+2
+88
+42
+99
 
-# Output:
-# 1
-# 2
-# 88
+Output:
+1
+2
+88
+'''
 
 n = int(input())
 while n != 42:
     print(n)
     n = int(input())
+
