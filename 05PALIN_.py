@@ -4,6 +4,7 @@
 PLAIN
 '''
 
+# ---------- 7.04 ----------
 def plus(string, pos):  # add 1 to number 9 at pos, do the same for previous if needed
     while string[-pos] == '9':
         string[-pos] = '0'

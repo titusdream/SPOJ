@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 '''
-PLAIN
+PLAIN  #1.00 (!0.84)
 
 A positive integer is called a palindrome if its representation in the decimal system is the same when read from left to right and from right to left. For a given positive integer K of not more than 1000000 digits, write the value of the smallest palindrome larger than K to output. Numbers are always displayed without leading zeros.
 
@@ -28,8 +28,42 @@ corner case test collection
 ['0','9','15641','808','2133','841357','199','1999','319887788993','333321','111','1111','999','9999','99999']
 '''
 
-def process(N):
- 
+'''
+#1.00 
+http://codereview.stackexchange.com/questions/9790/how-to-reduce-total-execution-time-in-python-for-this-program
+>regex, string operation (avoid list)
+'''
+
+import re
+
+def make_palindrome(text, odd):
+    return text + text[- odd - 1::-1]
+
+def upped(match):
+    content = match.group(0)
+    return chr(ord(content[0]) + 1 ) + '0' * (len(content) - 1)
+
+def palindrome(inputString, extract = re.compile(r'[^9]9*$')):
+    """ Code for finding out temporary palindrome. used by nextPalindrome function"""
+
+    # handle the case that increases the input length as a special case
+    if all(letter == '9' for letter in inputString):
+        return '1' + '0' * (len(inputString) - 1) + '1'
+
+    length = len(inputString)
+    odd = length % 2
+    number = inputString[:length//2 + odd]
+
+    current = make_palindrome(number, odd)
+    if current > inputString:
+        return current
+    else:
+        number = extract.sub(upped, number) 
+        return make_palindrome(number, odd)
+
+# ---------- 1.56 ---------- 
+def palindrome2(N):
+
     L = len(N)
  
     left = N[:L//2]
@@ -67,8 +101,17 @@ def process(N):
     P = left + center + right
     return P
 
+# isPalindrome
+# all(f == b for f,b in zip(s[:half], reversed(s[half:])))
+
 if __name__ == '__main__':
     
+    # Test
+    # testsuite = ['0','9','15641','808','2133','841357','199','1999','319887788993','333321','111','1111','999','9999','99999']
+    # for test in testsuite:
+    #     print(palindrome2(test))
+
     T = int(input())
     for _t in range(T):
-        print(process(input()))
+        print(palindrome(input()))
+
