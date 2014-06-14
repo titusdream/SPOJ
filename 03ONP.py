@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 '''
 ONP | Shunting-yard algorithm  #0.26 (!0.08)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 '''
 PRIME1 | Sieve of Eratosthenes  #1.74 (!0.24)
