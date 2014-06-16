@@ -1,42 +1,13 @@
 #!/usr/bin/env python3
 
 '''
-ONP | Shunting-yard algorithm  #0.26 (!0.08)
+ONP
 
-Transform the algebraic expression with brackets into RPN form 
-(Reverse Polish Notation). 
-Two-argument operators: +, -, *, /, ^ (priority from the lowest to the highest),
-brackets ( ). 
-Operands: only letters: a,b,...,z. Assume that there is only one RPN form 
-(no expressions like a*b*c).
-
-Input
-t [the number of expressions <= 100]
-expression [length <= 400]
-[other expressions]
-(Text grouped in [ ] does not appear in the input file.)
-
-Output
-The expressions in RPN form, one per line.
-
-Example
-
-Input:
-3
-(a+(b*c))
-((a+b)*(z+x))
-((a+t)*((b+(a+c))^(c+d)))
-
-Output:
-abc*+
-ab+zx+*
-at+bac++cd+^*
+> Shunting-yard algorithm  
+> 0.26 [0.08]
 '''
 
-'''
-#0.26
-http://andreinc.net/2010/10/05/converting-infix-to-rpn-shunting-yard-algorithm
-'''
+# ---------- 0.26 ---------- http://andreinc.net/2010/10/05/converting-infix-to-rpn-shunting-yard-algorithm
 
 # Associativity constants for operators
 LEFT_ASSOC = 0
@@ -113,10 +84,6 @@ def infixToRPN2(tokens):
 
 
 if __name__ == '__main__':
-    # Test:
-    # testsuite = ["(a+(b*c))","((a+b)*(z+x))","((a+t)*((b+(a+c))^(c+d)))"]
-    # for test in testsuite:
-    #     print(infixToRPN(test))
 
     T = int(input())
     for _t in range(T): # idiom for an unused variable is a single underscore _

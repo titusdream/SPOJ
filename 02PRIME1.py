@@ -1,41 +1,14 @@
 #!/usr/bin/env python3
 
 '''
-PRIME1 | Sieve of Eratosthenes  #1.74 (!0.24)
+PRIME1 
 
-Peter wants to generate some prime numbers for his cryptosystem. Help him! 
-Your task is to generate all prime numbers between two given numbers!
-
-Input
-The input begins with the number t of test cases in a single line (t<=10). 
-In each of the next t lines there are two numbers m and n 
-(1 <= m <= n <= 1000000000, n-m<=100000) separated by a space.
-
-Output
-For every test case print all prime numbers p such that m <= p <= n, 
-one number per line, test cases separated by an empty line.
-
-Example
-
-Input:
-2
-1 10
-3 5
-
-Output:
-2
-3
-5
-7
-
-3
-5
+> Sieve of Eratosthenes
+> 1.74 [0.24]
+> generator, set
 '''
 
-'''
-#1.74
-# http://stackoverflow.com/questions/2068372/fastest-way-to-list-all-primes-below-n-in-python/3035188#3035188
-'''
+# ---------- 1.74 ---------- http://stackoverflow.com/questions/2068372/fastest-way-to-list-all-primes-below-n-in-python/3035188#3035188
 
 # Prime Generator
 # steps through each odd number from 3 to 32000 
@@ -102,10 +75,7 @@ def gen(m, n):
             yield i
 
 
-# ---------- 1.98 ----------
-# http://www.codechef.com/viewsolution/1287533
-# > generator, set
-
+# ---------- 1.98 ---------- # http://www.codechef.com/viewsolution/1287533
 def gen2(m,n):
     if m == 1:
         m += 1
@@ -123,11 +93,9 @@ def gen2(m,n):
     for i in sorted(isp):
         yield i
 
-
 if __name__ == '__main__':
     
     T = int(input())
- 
     for _t in range(T):
         m, n = map(int, input().split())
         primes = gen(m, n)
