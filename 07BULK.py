@@ -3,8 +3,8 @@
 '''
 BULK
 
-> polygon area, point in polygon test, += & =...+... difference, OrderedDict
 > NOT possible for python to run within time requirement
+> polygon area, point in polygon test, += & =...+... difference, OrderedDict
 '''
 
 import collections
