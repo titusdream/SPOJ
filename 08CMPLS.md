@@ -28,19 +28,19 @@ It is guaranteed that the results Pmin(S+i) will be non-negative and will fit in
 
 Sample Input:
 
-4
-6 3
-1 2 3 4 5 6
-8 2
-1 2 4 7 11 16 22 29
-10 2
-1 1 1 1 1 1 1 1 1 2
-1 10
-3
+	4
+	6 3
+	1 2 3 4 5 6
+	8 2
+	1 2 4 7 11 16 22 29
+	10 2
+	1 1 1 1 1 1 1 1 1 2
+	1 10
+	3
 
 Sample Output:
 
-7 8 9
-37 46
-11 56
-3 3 3 3 3 3 3 3 3 3
+	7 8 9
+	37 46
+	11 56
+	3 3 3 3 3 3 3 3 3 3

@@ -10,6 +10,7 @@ All numbers at input are integers of one or two digits.
 **Example**
 
 Input:
+
 	1
 	2
 	88
@@ -17,6 +18,7 @@ Input:
 	99
 
 Output:
+
 	1
 	2
 	88
