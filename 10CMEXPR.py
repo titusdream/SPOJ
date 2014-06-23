@@ -8,7 +8,7 @@ CMEXPR
 > deque (fast removal of multiple items in a list)
 '''
 
-# ---------- infix<->suffix w/ stack 1.38 (local) ---------- a faster (simple, without right associative operator ^) suffix->infix(RPN) convertor (ref. 03ONP problem)
+# ---------- 1.38 (local) ---------- a faster (simple, without right associative operator ^) suffix->infix(RPN) convertor (ref. 03ONP problem)
 # http://hi.baidu.com/masterray/item/5fe4dee74a0e2e0d570f1d61
 
 isp = {'$':0, '+':3, '-':3, '*':5, '/':5, '(':1}
@@ -63,7 +63,7 @@ def suffix_to_infix(suffix):
     
     return stack[0][0]
 
-# ---------- "print" adapted from official c code 1.42 (local) ---------- infix-suffix w/ stack (see above), suffix-infix w/ tree
+# ---------- 1.42 (local) ---------- infix-suffix w/ stack (see above), suffix-infix w/ tree, "print" adapted from official c code
 
 operator_priority = {'+' : (2, 2), '-' : (2, 1), '*' : (1, 1), '/' : (1, 0)}
  
@@ -112,7 +112,7 @@ def create_expression_tree(infix):
      
     return ExressionTree(stack.pop())
 
-# ---------- original version 5.89 (local) ---------- 
+# ---------- 5.89 (local) ---------- original version
 
 def necessary(before, inside, after):
     '''
